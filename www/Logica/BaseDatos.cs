@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,22 @@ namespace Logica
 {
     class BaseDatos
     {
-        private List <Usuario> tablaUsuarios = new List<Usuario>();
+        private List<Usuario> tablaUsuarios; 
+        private List<Encuesta> tablaEncuestas; 
 
         public BaseDatos()
         {
+            this.tablaUsuarios  = new List<Usuario>(); 
+            this.tablaEncuestas = new List<Encuesta>();
+        }
 
+        public BaseDatos (List <Object> o)
+        {
+            if (o.First().GetType()==Type.GetType("Usuario"))
+            {
+                
+                this.tablaEncuestas = new List<Encuesta>();
+            }
         }
 
         public bool estaUsuario(Usuario u)
@@ -27,7 +39,7 @@ namespace Logica
 
         public bool estaEncuesta(Encuesta e)
         {
-            if (tablaUsuarios.Contains(u))
+            if (tablaEncuestas.Contains(e))
             {
                 return true;
             }
@@ -35,6 +47,11 @@ namespace Logica
             {
                 return false;
             }
+        }
+
+        public bool guardarPuntuacion (Encuesta e, int punt)
+        {
+            return false;
         }
 
 
