@@ -6,6 +6,7 @@ namespace Logica
     {
     class Encuesta
         {
+        int id;
         string Nombre { get; set; }
         string Descripcion { get; set; }
         bool Activado { get; set; }
@@ -13,6 +14,7 @@ namespace Logica
 
         public Encuesta(string nombre, string descripcion, bool activado, BaseDatos bas)
         {
+
             Nombre = nombre;
             Descripcion = descripcion;
             Activado = activado;
@@ -21,7 +23,7 @@ namespace Logica
 
         public void Puntuar(int puntuacion)
         {
-            bd.GuardarPuntuacion(puntuacion);
+            bd.GuardarPuntuacion(this, puntuacion);
         }
     }
 }
