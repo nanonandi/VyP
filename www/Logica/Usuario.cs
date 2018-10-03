@@ -36,7 +36,5 @@ namespace Logica
             set { this.eMail = value; }
         }
 
-        
-
     }
 }
