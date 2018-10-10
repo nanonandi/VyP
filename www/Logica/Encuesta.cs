@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Logica
     {
-    class Encuesta
+    public class Encuesta
         {
         string Nombre { get; set; }
         string Descripcion { get; set; }
@@ -21,7 +21,9 @@ namespace Logica
 
         public void Puntuar(int puntuacion)
         {
-            bd.GuardarPuntuacion(puntuacion);
+            bd.GuardarPuntuacion(this,puntuacion);
         }
+
+        
     }
 }

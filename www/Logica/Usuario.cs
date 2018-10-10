@@ -6,13 +6,15 @@ namespace Logica
 {
     public class Usuario
     {
-        private string contrasena;
+        private string contraseña;
+        private BaseDatos bd;
 
-        public Usuario(int idUsuario, string cuenta, string eMail)
+        public Usuario(int idUsuario, string cuenta, string eMail, BaseDatos bd)
         {
             this.idUsuario = idUsuario;
             this.cuenta = cuenta;
             this.eMail = eMail;
+            this.bd = bd;
         }
 
         private int idUsuario;
@@ -34,6 +36,13 @@ namespace Logica
         {
             get { return this.eMail; }
             set { this.eMail = value; }
+        }
+
+        public bool añadirEncuesta (string nombre, string descripcion)
+        {
+            Encuesta e = new Encuesta(nombre, descripcion,true,bd);
+            bd.GuardarEncuesta(e);
+            return false;
         }
 
     }
