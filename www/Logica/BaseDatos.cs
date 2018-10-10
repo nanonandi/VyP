@@ -49,7 +49,7 @@ namespace Logica
             }
         }
 
-        public bool guardarPuntuacion (Encuesta e, int punt)
+        public bool GuardarPuntuacion (Encuesta e, int punt)
         {
             return false;
         }
