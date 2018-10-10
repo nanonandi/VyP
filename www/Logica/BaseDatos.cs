@@ -16,20 +16,7 @@ namespace Logica
             this.tablaEncuestas = new List<Encuesta>();
         }
 
-        public BaseDatos (List <Object> o)
-        {
-            if (o.First().GetType()==Type.GetType("Usuario"))
-            {
-                
-                //añadir constructor
-            }
-
-            if (o.First().GetType() == Type.GetType("Encuesta"))
-            {
-
-                //añadir constructor
-            }
-        }
+        
 
         public bool EstaUsuario(Usuario u)
         {
@@ -62,7 +49,8 @@ namespace Logica
 
         public bool GuardarEncuesta(Encuesta e)
         {
-            return false;
+            tablaEncuestas.Add(e);
+            return true;
         }
 
     }

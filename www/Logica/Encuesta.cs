@@ -6,7 +6,7 @@ namespace Logica
     {
     public class Encuesta
         {
-        int id;
+        private int id;
         string Nombre { get; set; }
         string Descripcion { get; set; }
         bool Activado { get; set; }
