@@ -14,6 +14,7 @@ namespace Logica
         {
             this.tablaUsuarios  = new List<Usuario>(); 
             this.tablaEncuestas = new List<Encuesta>();
+            //meter un usuario para hacer pruebas
         }
 
         
@@ -49,9 +50,20 @@ namespace Logica
 
         public bool GuardarEncuesta(Encuesta e)
         {
-            tablaEncuestas.Add(e);
-            return true;
+            if (EstaEncuesta(e)==false)
+            {
+                tablaEncuestas.Add(e);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
+
+        //Usuario leeUsuario (string cuenta){}
+        //List<Encuesta> leeEncuestasActivas(){}
 
     }
 }
