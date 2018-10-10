@@ -7,6 +7,10 @@ namespace Logica
     public class Encuesta
         {
         private int id;
+        public int Id
+        {
+            get { return this.id; }
+        }
         string Nombre { get; set; }
         string Descripcion { get; set; }
         bool Activado { get; set; }
@@ -47,6 +51,19 @@ namespace Logica
             else
             {
                 Activado = true;
+            }
+        }
+        public override bool Equals(object obj)
+        {
+            Encuesta item = obj as Encuesta;
+
+            if (this.id == item.Id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

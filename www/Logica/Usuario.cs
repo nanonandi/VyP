@@ -44,6 +44,18 @@ namespace Logica
             bd.GuardarEncuesta(e);
             return false;
         }
+        public override bool Equals(object obj)
+        {
+            Usuario item = obj as Usuario;
 
+            if (this.idUsuario == item.IdUsuario)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
