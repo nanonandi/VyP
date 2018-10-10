@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Logica
     {
-    class Encuesta
+    public class Encuesta
         {
         int id;
         string Nombre { get; set; }
