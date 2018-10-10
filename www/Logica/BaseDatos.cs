@@ -48,6 +48,12 @@ namespace Logica
             return false;
         }
 
+        public bool GuardarUsuario(Usuario u)
+        {
+            tablaUsuarios.Add(u);
+            return true;
+        }
+
         public bool GuardarEncuesta(Encuesta e)
         {
             if (EstaEncuesta(e)==false)
