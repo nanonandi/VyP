@@ -59,7 +59,6 @@ namespace Logica
             }
         }
 
-
         public bool GuardarUsuario(Usuario u)
         {
             if (EstaUsuario(u) == false)
@@ -88,7 +87,6 @@ namespace Logica
 
         }
 
-       
         //Usuario leeUsuario (string cuenta){}
         //List<Encuesta> leeEncuestasActivas(){}
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Logica
@@ -26,6 +27,12 @@ namespace Logica
         {
             return activado;
         }
+        private List<int> puntuacion;
+        public int Puntuacion
+        {
+            get { return puntuacion.Sum(); }
+        }
+
 
         public Encuesta(int id, string nombre, string descripcion, bool activado)
         {
@@ -37,7 +44,7 @@ namespace Logica
 
         public void Puntuar(int puntuacion)
         {
-            bd.GuardarPuntuacion(this, puntuacion);
+            this.puntuacion.Add(puntuacion);
         }
 
         public void ModificarEncuesta(string n, string d)
