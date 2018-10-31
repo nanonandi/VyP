@@ -27,18 +27,32 @@ namespace www
                 Session["db"] = db;
             }
 
-            foreach (Encuesta en in db.EncuestasActivas())
-            {
-                itemsEncuestas.Add(new ListItem(en.Nombre, ((int)en.Id).ToString()));
+
+
+
+        if (!IsPostBack) {
+                foreach (Encuesta en in db.EncuestasActivas())
+                {
+                    itemsEncuestas.Add(new ListItem(en.Nombre, ((int)en.Id).ToString()));
+                }
+
+                enc.DataSource = itemsEncuestas;
+                enc.DataBind();
             }
 
-            enc.DataSource = itemsEncuestas;
-            enc.DataBind();
+            
         }
+
+        
 
         protected void AccEncuesta_Click(object sender, EventArgs e)
         {
             Server.Transfer(".\\Votar.aspx");
+        }
+
+        protected void Verdesc_Click(object sender, EventArgs e)
+        {
+            desc.Text = enc.SelectedItem.Text;
         }
     }
 }

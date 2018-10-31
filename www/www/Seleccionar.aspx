@@ -29,7 +29,12 @@
                         </asp:DropDownList>
                         <br />
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="Verdesc" runat="server" OnClick="Verdesc_Click" Text="Ver Descripcion" />
+                        <br />
+                        <br />
+                        <asp:TextBox ID="desc" runat="server" ReadOnly="True"></asp:TextBox>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>

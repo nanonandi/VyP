@@ -31,6 +31,24 @@ namespace www {
         protected global::System.Web.UI.WebControls.DropDownList enc;
         
         /// <summary>
+        /// Control Verdesc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Verdesc;
+        
+        /// <summary>
+        /// Control desc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox desc;
+        
+        /// <summary>
         /// Control AccEncuesta.
         /// </summary>
         /// <remarks>

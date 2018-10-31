@@ -11,6 +11,9 @@
             width: 100%;
             height: 500px;
         }
+        .auto-style2 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -19,35 +22,44 @@
             <table class="auto-style1">
                 <tr>
                     <td>&nbsp;</td>
-                    <td>Realiza tu Votación ! :D</td>
+                    <td colspan="5">Realiza tu Votación ! :D</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td colspan="5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" ImageUrl="./emotis/1.png" Width="200px" />
+                    </td>
+                    <td class="auto-style2">
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="220px" ImageUrl="./emotis/2.png" Width="220px" />
+                    </td>
+                    <td class="auto-style2">
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="200px" ImageUrl="./emotis/3.png" />
+                    </td>
+                    <td class="auto-style2">
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="200px" ImageUrl="./emotis/4.png" />
+                    </td>
+                    <td class="auto-style2">
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="200px" ImageUrl="./emotis/5.png" />
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td colspan="5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td colspan="5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-            </table>
+                </table>
         </div>
     </form>
 </body>
