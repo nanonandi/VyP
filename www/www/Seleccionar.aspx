@@ -25,9 +25,9 @@
                 <tr>
                     <td>Encuestas:<br />
                         <br />
-                        <br />
-                        <asp:DropDownList ID="enc" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                        <asp:DropDownList ID="enc" runat="server">
                         </asp:DropDownList>
+                        <br />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

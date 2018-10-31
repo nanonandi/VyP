@@ -15,6 +15,17 @@ namespace Logica
             this.tablaUsuarios = new List<Usuario>();
             this.tablaEncuestas = new List<Encuesta>();
             //meter un usuario para hacer pruebas
+
+            Usuario u1 = new Usuario(0, "cero", "cero@cero.com", "hola");
+            Usuario u2 = new Usuario(1, "uno", "uno@uno.com", "adios");
+            tablaUsuarios.Add(u1);
+            tablaUsuarios.Add(u2);
+
+            Encuesta e1 = new Encuesta(0, "Encuesta 1", "Esta encuesta es la primera", true);
+            Encuesta e2 = new Encuesta(1, "Encuesta 2", "Esta encuesta es el segundo", true);
+            tablaEncuestas.Add(e1);
+            tablaEncuestas.Add(e2);
+
         }
 
         public List<Encuesta> Encuestas()
