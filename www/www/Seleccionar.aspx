@@ -35,7 +35,9 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="AccEncuesta" runat="server" OnClick="AccEncuesta_Click" Text="Aceptar" />
+                    </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

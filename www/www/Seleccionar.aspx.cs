@@ -36,7 +36,9 @@ namespace www
             enc.DataBind();
         }
 
-
-
+        protected void AccEncuesta_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Votar.aspx");
+        }
     }
 }
