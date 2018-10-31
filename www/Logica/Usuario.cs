@@ -14,7 +14,7 @@ namespace Logica
             this.idUsuario = idUsuario;
             this.cuenta = cuenta;
             this.eMail = eMail;
-            Encriptar(contrasena);
+            this.contrasena = Encriptar(contrasena);
         }
 
         private int idUsuario;
@@ -41,7 +41,7 @@ namespace Logica
         public void AsignarContrasena (string contra)
         {
             string cont = Encriptar(contra);
-            this.contrasena = contra;
+            this.contrasena = cont;
         }
 
         public bool ComprobarContrasena(string contra)

@@ -46,33 +46,37 @@ namespace Logica
             return activas;
         }
 
-        public bool EstaUsuario(Usuario u)
+        public bool EstaUsuario(int id)
         {
-            if (tablaUsuarios.Contains(u))
+            bool devolver = false;
+            foreach (Usuario us in tablaUsuarios)
             {
-                return true;
+                if (us.IdUsuario == id)
+                {
+                    devolver = true;
+                }
             }
-            else
-            {
-                return false;
-            }
+
+            return devolver;
         }
 
-        public bool EstaEncuesta(Encuesta e)
+        public bool EstaEncuesta(int id)
         {
-            if (tablaEncuestas.Contains(e))
+            bool devolver = false;
+            foreach (Encuesta en in tablaEncuestas)
             {
-                return true;
+                if (en.Id == id)
+                {
+                    devolver = true;
+                }
             }
-            else
-            {
-                return false;
-            }
+
+            return devolver;
         }
 
         public bool GuardarUsuario(Usuario u)
         {
-            if (EstaUsuario(u) == false)
+            if (EstaUsuario(u.IdUsuario) == false)
             {
                 tablaUsuarios.Add(u);
                 return true;
@@ -86,7 +90,7 @@ namespace Logica
 
         public bool GuardarEncuesta(Encuesta e)
         {
-            if (EstaEncuesta(e) == false)
+            if (EstaEncuesta(e.Id) == false)
             {
                 tablaEncuestas.Add(e);
                 return true;
