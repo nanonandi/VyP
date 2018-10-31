@@ -59,10 +59,6 @@ namespace Logica
             }
         }
 
-        public bool GuardarPuntuacion(Encuesta e, int punt)
-        {
-            return false;
-        }
 
         public bool GuardarUsuario(Usuario u)
         {
@@ -92,6 +88,7 @@ namespace Logica
 
         }
 
+       
         //Usuario leeUsuario (string cuenta){}
         //List<Encuesta> leeEncuestasActivas(){}
 

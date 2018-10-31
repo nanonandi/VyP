@@ -35,5 +35,10 @@ namespace www
             enc.DataSource = itemsEncuestas;
             enc.DataBind();
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

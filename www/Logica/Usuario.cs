@@ -44,7 +44,7 @@ namespace Logica
             this.contrasena = contra;
         }
 
-        public bool ConprobarContrasena(string contra)
+        public bool ComprobarContrasena(string contra)
         {
             string cont = Encriptar(contra);
             return this.contrasena.Equals(cont);
