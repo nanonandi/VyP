@@ -36,9 +36,9 @@ namespace www
             enc.DataBind();
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void AccEncuesta_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer(".\\Votar.aspx");
         }
     }
 }
