@@ -35,5 +35,8 @@ namespace www
             enc.DataSource = itemsEncuestas;
             enc.DataBind();
         }
+
+
+
     }
 }

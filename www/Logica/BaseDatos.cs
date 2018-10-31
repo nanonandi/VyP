@@ -59,11 +59,6 @@ namespace Logica
             }
         }
 
-        public bool GuardarPuntuacion(Encuesta e, int punt)
-        {
-            return false;
-        }
-
         public bool GuardarUsuario(Usuario u)
         {
             if (EstaUsuario(u) == false)
