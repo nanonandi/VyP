@@ -10,7 +10,7 @@ namespace TestLogica
         [TestMethod]
         public void TestConstructorSetyGet()
         {
-            Usuario u = new Usuario(1, "cuenta", "cuenta@ubu.es");
+            Usuario u = new Usuario(1, "cuenta", "cuenta@ubu.es", "pepinillo");
 
             Assert.AreEqual(u.IdUsuario, 1);
             Assert.AreEqual(u.Cuenta, "cuenta");

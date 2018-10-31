@@ -3,26 +3,36 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Logica
-    {
+{
     public class Encuesta
-        {
+    {
         private int id;
         public int Id
         {
             get { return this.id; }
         }
-        string Nombre { get; set; }
-        string Descripcion { get; set; }
-        bool Activado { get; set; }
-        private BaseDatos bd;
-
-        public Encuesta(string nombre, string descripcion, bool activado, BaseDatos bd)
+        private string nombre;
+        public string Nombre
         {
+            get { return this.nombre; }
+        }
+        private string descripcion;
+        public string Descripcion
+        {
+            get{ return this.descripcion; }
+        }
+        private bool activado;
+        public bool Activo()
+        {
+            return activado;
+        }
 
-            Nombre = nombre;
-            Descripcion = descripcion;
-            Activado = activado;
-            this.bd = bd;
+        public Encuesta(int id, string nombre, string descripcion, bool activado)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.activado = activado;
         }
 
         public void Puntuar(int puntuacion)
@@ -32,25 +42,25 @@ namespace Logica
 
         public void ModificarEncuesta(string n, string d)
         {
-            if(n != null)
+            if (n != null)
             {
-                Nombre = n;
+                nombre = n;
             }
-            if(d != null)
+            if (d != null)
             {
-                Descripcion = d;
+                descripcion = d;
             }
         }
 
         public void ActivarDesactivarEncuesta()
         {
-            if (Activado)
+            if (Activo())
             {
-                Activado = false;
+                activado = false;
             }
             else
             {
-                Activado = true;
+                activado = true;
             }
         }
         public override bool Equals(object obj)
@@ -65,6 +75,10 @@ namespace Logica
             {
                 return false;
             }
+        }
+        public override int GetHashCode()
+        {
+            return this.id;
         }
     }
 }

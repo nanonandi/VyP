@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logica\Logica.csproj">
-      <Project>{b13b105a-12ef-4f92-ae69-f61a7ec9f86a}</Project>
+      <Project>{f6cc25d9-e246-4ac7-a85f-1e73240c5d09}</Project>
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>

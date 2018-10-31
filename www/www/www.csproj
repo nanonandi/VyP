@@ -66,10 +66,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LogIn.aspx" />
+    <Content Include="Seleccionar.aspx" />
+    <Content Include="Votar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seleccionar.aspx.cs">
+      <DependentUpon>Seleccionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seleccionar.aspx.designer.cs">
+      <DependentUpon>Seleccionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Votar.aspx.cs">
+      <DependentUpon>Votar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Votar.aspx.designer.cs">
+      <DependentUpon>Votar.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{f6cc25d9-e246-4ac7-a85f-1e73240c5d09}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
