@@ -2,15 +2,14 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Logica;
 
 namespace TestLogica {
     /// <summary>
-    /// Descripción resumida de TestBaseDatos
+    /// Descripción resumida de TestEncuesta
     /// </summary>
     [TestClass]
-    public class TestBaseDatos {
-        public TestBaseDatos()
+    public class TestEncuesta {
+        public TestEncuesta()
         {
             //
             // TODO: Agregar aquí la lógica del constructor
@@ -60,41 +59,7 @@ namespace TestLogica {
         [TestMethod]
         public void TestConstructor()
         {
-            BaseDatos b = new BaseDatos();
-            Assert.AreEqual(b.NumUsuarios(),2);
-            Assert.IsTrue(b.EstaUsuario(0));
-            Assert.IsTrue(b.EstaUsuario(1));
-            Assert.AreEqual(b.NumEncuestas(), 2);
-            Assert.IsTrue(b.EstaEncuesta(0));
-            Assert.IsTrue(b.EstaEncuesta(1));
-        }
-
-        [TestMethod]
-        public void TestGuardarUsuario()
-        {
-            BaseDatos b = new BaseDatos();
-            b.GuardarUsuario(new Usuario(2, "cuenta", "cuenta@ubu.es", "pepinillo"));
-            Assert.AreEqual(b.NumUsuarios(), 3);
-            Assert.IsTrue(b.EstaUsuario(2));
-        }
-
-        [TestMethod]
-        public void TestGuardarEncuesta()
-        {
-            BaseDatos b = new BaseDatos();
-            b.GuardarEncuesta(new Encuesta(2, "encuestaprueba", "esta es una encuesta de prueba", true));
-            Assert.AreEqual(b.NumEncuestas(), 3);
-            Assert.IsTrue(b.EstaEncuesta(2));
-        }
-
-        [TestMethod]
-        public void TestEncuestasActivas()
-        {
-            BaseDatos b = new BaseDatos();
-            b.GuardarEncuesta(new Encuesta(2, "encuestainactiva", "esta es una encuesta no activa", false));
-            Assert.AreEqual(b.NumEncuestas(), 3);
-            Assert.IsTrue(b.EstaEncuesta(2));
-            Assert.AreEqual(b.NumEncuestasActivas(), 2);
+            
         }
     }
 }

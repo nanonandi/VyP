@@ -102,6 +102,21 @@ namespace Logica
 
         }
 
+        public int NumUsuarios()
+        {
+            return tablaUsuarios.Count();
+        }
+
+        public int NumEncuestas()
+        {
+            return tablaEncuestas.Count();
+        }
+
+        public int NumEncuestasActivas()
+        {
+            return EncuestasActivas().Count;
+        }
+
         //Usuario leeUsuario (string cuenta){}
         //List<Encuesta> leeEncuestasActivas(){}
 
