@@ -74,6 +74,36 @@ namespace Logica
             return devolver;
         }
 
+        public Encuesta GetEncuesta(int id)
+        {
+            Encuesta devolver = null;
+            foreach (Encuesta en in tablaEncuestas)
+            {
+                if (en.Id == id)
+                {
+                    devolver = en;
+                    break;
+                }
+            }
+
+            return devolver;
+        }
+
+        public Encuesta GetEncuesta(string nombreid)
+        {
+            Encuesta devolver = null;
+            foreach (Encuesta en in tablaEncuestas)
+            {
+                if (en.Nombre == nombreid)
+                {
+                    devolver = en;
+                    break;
+                }
+            }
+
+            return devolver;
+        }
+
         public bool GuardarUsuario(Usuario u)
         {
             if (EstaUsuario(u.IdUsuario) == false)

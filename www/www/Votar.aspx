@@ -33,25 +33,20 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" ImageUrl="./emotis/1.png" Width="200px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" ImageUrl="./emotis/1.png" OnClick="ImageButton1_Click" />
                     </td>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ImageButton2" runat="server" Height="220px" ImageUrl="./emotis/2.png" Width="220px" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="200px" ImageUrl="./emotis/2.png" OnClick="ImageButton2_Click" />
                     </td>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ImageButton3" runat="server" Height="200px" ImageUrl="./emotis/3.png" />
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="200px" ImageUrl="./emotis/3.png" OnClick="ImageButton3_Click" />
                     </td>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ImageButton4" runat="server" Height="200px" ImageUrl="./emotis/4.png" />
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="200px" ImageUrl="./emotis/4.png" OnClick="ImageButton4_Click" />
                     </td>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ImageButton5" runat="server" Height="200px" ImageUrl="./emotis/5.png" />
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="200px" ImageUrl="./emotis/5.png" OnClick="ImageButton5_Click" />
                     </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td colspan="5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
