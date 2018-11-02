@@ -9,20 +9,14 @@ namespace Logica
     {
         private string contrasena;
 
-        public Usuario(int idUsuario, string cuenta, string eMail, string contrasena)
+        public Usuario(string cuenta, string eMail, string contrasena)
         {
-            this.idUsuario = idUsuario;
             this.cuenta = cuenta;
             this.eMail = eMail;
             this.contrasena = Encriptar(contrasena);
         }
 
-        private int idUsuario;
-        public int IdUsuario
-        {
-            get { return this.idUsuario; }
-            set { this.idUsuario = value; }
-        }
+        
 
         private string cuenta;
         public string Cuenta
@@ -62,7 +56,7 @@ namespace Logica
         {
             Usuario item = obj as Usuario;
 
-            if (this.idUsuario == item.IdUsuario)
+            if (this.Cuenta == item.Cuenta)
             {
                 return true;
             }
@@ -74,7 +68,7 @@ namespace Logica
 
         public override int GetHashCode()
         {
-            return this.idUsuario;
+            return Cuenta.GetHashCode();
         }
 
     }

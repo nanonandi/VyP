@@ -7,11 +7,7 @@ namespace Logica
 {
     public class Encuesta
     {
-        private int id;
-        public int Id
-        {
-            get { return this.id; }
-        }
+       
         private string nombre;
         public string Nombre
         {
@@ -34,9 +30,8 @@ namespace Logica
         }
 
 
-        public Encuesta(int id, string nombre, string descripcion, bool activado)
+        public Encuesta(string nombre, string descripcion, bool activado)
         {
-            this.id = id;
             this.nombre = nombre;
             this.descripcion = descripcion;
             this.activado = activado;
@@ -74,7 +69,7 @@ namespace Logica
         {
             Encuesta item = obj as Encuesta;
 
-            if (this.id == item.Id)
+            if (this.Nombre == item.Nombre)
             {
                 return true;
             }
@@ -85,7 +80,7 @@ namespace Logica
         }
         public override int GetHashCode()
         {
-            return this.id;
+            return this.Nombre.GetHashCode();
         }
     }
 }
