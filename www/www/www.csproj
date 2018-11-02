@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogIn.aspx" />
+    <Content Include="Menu.aspx" />
     <Content Include="Seleccionar.aspx" />
     <Content Include="Votar.aspx" />
     <Content Include="Web.config" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seleccionar.aspx.cs">

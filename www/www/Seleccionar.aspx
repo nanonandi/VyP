@@ -20,6 +20,12 @@
         .auto-style4 {
             width: 300px;
         }
+        .auto-style5 {
+            width: 559px;
+        }
+        .auto-style6 {
+            margin-left: 0px;
+        }
     </style>
 </head>
 <body>
@@ -27,22 +33,32 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td colspan="5"><h1>Seleccione la encuesta que quiera votar.</h1></td>
+                    <td colspan="3" rowspan="2"><h1 class="auto-style5">Seleccione la encuesta que quiera votar.</h1></td>
+                    <td>&nbsp;</td>
+                </tr>    
+                <tr>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" CssClass="auto-style6" Height="37px" OnClick="Button1_Click" Text="Iniciar sesión" Width="170px" />
+                    </td>
+                </tr>    
+                <tr>
+                    <td colspan="4"></td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Encuestas:<br />
                         <br />
+                        
                         <asp:DropDownList ID="enc" runat="server">
                         </asp:DropDownList>
                         <br />
                     </td>
                     <td class="auto-style4">
-                        <asp:Button ID="Verdesc" runat="server" OnClick="Verdesc_Click" Text="Ver Descripcion" />
+                        <asp:Button ID="Verdesc" runat="server" OnClick="Verdesc_Click" Text="Ver Descripcion" Width="111px" />
                         <br />
                         <br />
                         <asp:Label ID="desctext" runat="server" Text="(Descripción)"></asp:Label>
                     </td>
-                    <td colspan="3">
+                    <td colspan="2">
                         <br />
                         <br />
                     </td>
@@ -52,13 +68,12 @@
                     <td class="auto-style3">
                         <asp:Label ID="error" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
                     </td>
-                    <td class="auto-style3">
-                        <asp:Button ID="AccEncuesta" runat="server" OnClick="AccEncuesta_Click" Text="Aceptar" />
+                    <td>
+                        <asp:Button ID="AccEncuesta" runat="server" OnClick="AccEncuesta_Click" Text="Aceptar" Height="37px" Width="170px" />
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="3">&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
                 </tr>
             </table>
         </div>
