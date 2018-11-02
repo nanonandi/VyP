@@ -17,6 +17,9 @@
         .auto-style3 {
             width: 632px;
         }
+        .auto-style4 {
+            width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +36,7 @@
                         </asp:DropDownList>
                         <br />
                     </td>
-                    <td class="auto-style2">
+                    <td class="auto-style4">
                         <asp:Button ID="Verdesc" runat="server" OnClick="Verdesc_Click" Text="Ver Descripcion" />
                         <br />
                         <br />
@@ -46,7 +49,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2" rowspan="2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3">
+                        <asp:Label ID="error" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
+                    </td>
                     <td class="auto-style3">
                         <asp:Button ID="AccEncuesta" runat="server" OnClick="AccEncuesta_Click" Text="Aceptar" />
                     </td>
