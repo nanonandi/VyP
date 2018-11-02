@@ -13,12 +13,13 @@ namespace www
         List<ListItem> itemsEncuestas = new List<ListItem>();
 
         BaseDatos db;
-
+        Encuesta encuestaActiva;
         
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Encuesta encuestaActiva = null;
+            
 
             db = (BaseDatos)Session["db"];
             if (db == null)
@@ -27,18 +28,42 @@ namespace www
                 Session["db"] = db;
             }
 
-            foreach (Encuesta en in db.EncuestasActivas())
-            {
-                itemsEncuestas.Add(new ListItem(en.Nombre, ((int)en.Id).ToString()));
-            }
+            encuestaActiva = (Encuesta)Session["encuestaActiva"];
 
-            enc.DataSource = itemsEncuestas;
-            enc.DataBind();
+
+        if (!IsPostBack) {
+                itemsEncuestas.Add(new ListItem("Vacio", "0"));
+                foreach (Encuesta en in db.EncuestasActivas())
+                {
+                    itemsEncuestas.Add(new ListItem(en.Nombre, ((int)en.Id + 1).ToString()));
+                }
+
+                enc.DataSource = itemsEncuestas;
+                enc.DataBind();
+            }
         }
+
+        
 
         protected void AccEncuesta_Click(object sender, EventArgs e)
         {
             Server.Transfer(".\\Votar.aspx");
+        }
+
+        ListItem a;
+        protected void Verdesc_Click(object sender, EventArgs e)
+        {
+            a = enc.SelectedItem;
+            
+            if(a.Text != "Vacio")
+            {
+                encuestaActiva = db.GetEncuesta(a.Text);
+                desctext.Text = encuestaActiva.Descripcion;
+            }
+            else
+            {
+                desctext.Text = "(Descripcion)";
+            }
         }
     }
 }

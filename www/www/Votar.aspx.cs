@@ -13,5 +13,30 @@ namespace www
         {
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }
