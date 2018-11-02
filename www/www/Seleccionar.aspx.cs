@@ -14,7 +14,6 @@ namespace www
 
         BaseDatos db;
         Encuesta encuestaActiva;
-        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,9 +25,10 @@ namespace www
             {
                 db = new BaseDatos();
                 Session["db"] = db;
-            }
+                Session["encuestaActiva"] = null;
 
-            encuestaActiva = (Encuesta)Session["encuestaActiva"];
+            }
+            
 
 
         if (!IsPostBack) {
@@ -45,11 +45,6 @@ namespace www
 
         
 
-        protected void AccEncuesta_Click(object sender, EventArgs e)
-        {
-            Server.Transfer(".\\Votar.aspx");
-        }
-
         ListItem a;
         protected void Verdesc_Click(object sender, EventArgs e)
         {
@@ -57,12 +52,26 @@ namespace www
             
             if(a.Text != "Vacio")
             {
-                encuestaActiva = db.GetEncuesta(a.Text);
+                Session["encuestaActiva"] = db.GetEncuesta(a.Text);
+                encuestaActiva = (Encuesta)Session["encuestaActiva"];
                 desctext.Text = encuestaActiva.Descripcion;
             }
             else
             {
+                Session["encuestaActiva"] = null;
                 desctext.Text = "(Descripcion)";
+            }
+        }
+
+        protected void AccEncuesta_Click(object sender, EventArgs e)
+        {
+            if(Session["encuestaActiva"] != null)
+            {
+                Server.Transfer(".\\Votar.aspx");
+            }
+            else
+            {
+                error.Text = "Seleccione una encuesta";
             }
         }
     }
