@@ -7,11 +7,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-        .auto-style1 {
+        .auto-style3 {
             width: 145px;
+            height: 60px;
         }
-        .auto-style2 {
-            width: 222px;
+        .auto-style4 {
+            width: 400px;
+            height: 60px;
+        }
+        .auto-style5 {
+            height: 60px;
+        }
+        .auto-style9 {
+            width: 145px;
+            height: 37px;
+        }
+        .auto-style10 {
+            width: 400px;
+            height: 37px;
+        }
+        .auto-style11 {
+            height: 37px;
         }
     </style>
 </head>
@@ -21,17 +37,36 @@
             
             <table style="width: 100%;">
                 <tr>
-                    <td class="auto-style1">LogIn</td>
-                    <td class="auto-style2">
-                        <input id="Text1" type="text" /></td>
+                    <td colspan="3"><h1>Iniciar Sesión</h1></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">PassWord</td>
-                    <td class="auto-style2">
-                        <input id="Password1" type="password" /></td>
-                    <td>
-                        <asp:Button ID="Button1" runat="server" Text="Iniciar" />
+                    <td class="auto-style9">LogIn</td>
+                    <td class="auto-style10">
+                        <asp:TextBox ID="user" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style11"></td>
+                    <td class="auto-style11"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style9">PassWord</td>
+                    <td class="auto-style10">
+                        <asp:TextBox ID="pass" runat="server" TextMode="Password"></asp:TextBox>
+                    </td>
+                    <td class="auto-style11">
+                    </td>
+                    <td class="auto-style11">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style4">
+                        <asp:Label ID="Label1" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
+                    </td>
+                    <td class="auto-style5">
+                    </td>
+                    <td class="auto-style5">
+                        <asp:Button ID="iniciar" runat="server" Height="37px" OnClick="iniciar_Click" Text="Button" Width="170px" />
                     </td>
                 </tr>
             </table>

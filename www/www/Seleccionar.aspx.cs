@@ -25,17 +25,21 @@ namespace www
             {
                 db = new BaseDatos();
                 Session["db"] = db;
-                Session["encuestaActiva"] = null;
 
             }
             
 
 
-        if (!IsPostBack) {
+            if (!IsPostBack)
+            {
+
+                Session["encuestaActiva"] = null;
+                Session["sesion"] = null;
+
                 itemsEncuestas.Add(new ListItem("Vacio", "0"));
                 foreach (Encuesta en in db.EncuestasActivas())
                 {
-                    itemsEncuestas.Add(new ListItem(en.Nombre, ((int)en.Id + 1).ToString()));
+                    itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
                 }
 
                 enc.DataSource = itemsEncuestas;
@@ -73,6 +77,11 @@ namespace www
             {
                 error.Text = "Seleccione una encuesta";
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\LogIn.aspx");
         }
     }
 }
