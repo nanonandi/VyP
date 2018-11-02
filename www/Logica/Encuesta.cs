@@ -23,7 +23,7 @@ namespace Logica
         {
             return activado;
         }
-        private List<int> puntuacion;
+        private List<int> puntuacion = new List<int>();
         public int Puntuacion
         {
             get { return puntuacion.Sum()/puntuacion.Count; }
@@ -65,6 +65,12 @@ namespace Logica
                 activado = true;
             }
         }
+
+        public int NumeroVotos()
+        {
+            return puntuacion.Count;
+        }
+
         public override bool Equals(object obj)
         {
             Encuesta item = obj as Encuesta;
@@ -82,5 +88,8 @@ namespace Logica
         {
             return this.Nombre.GetHashCode();
         }
+
+       
+        
     }
 }
