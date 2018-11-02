@@ -21,6 +21,7 @@ namespace TestLogica
             Assert.AreEqual(u3.EMail, "cuenta3@ubu.es");
         }
 
+
         [TestMethod]
         public void TestContrasena ()
         {
@@ -32,6 +33,16 @@ namespace TestLogica
 
         }
 
-       
+        [TestMethod]
+        public void TestEquals()
+        {
+            Usuario u = new Usuario("cuenta", "cuenta@ubu.es", "pepinillo");
+            Usuario u2 = new Usuario("cuenta", "cuenta@ubu.es", "pepinillo");
+            Usuario u3 = new Usuario("cuenta2", "cuenta2@ubu.es", "pepinillo2");
+            Assert.IsTrue(u.Equals(u2));
+            Assert.IsFalse(u.Equals(u3));
+        }
+
+
     }
 }
