@@ -30,7 +30,7 @@ namespace Logica
         private List<int> puntuacion;
         public int Puntuacion
         {
-            get { return puntuacion.Sum(); }
+            get { return puntuacion.Sum()/puntuacion.Count; }
         }
 
 
