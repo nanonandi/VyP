@@ -10,17 +10,21 @@ namespace TestLogica
         [TestMethod]
         public void TestConstructorSetyGet()
         {
-            Usuario u = new Usuario(1, "cuenta", "cuenta@ubu.es", "pepinillo");
-
-            Assert.AreEqual(u.IdUsuario, 1);
+            Usuario u = new Usuario("cuenta", "cuenta@ubu.es", "pepinillo");
             Assert.AreEqual(u.Cuenta, "cuenta");
             Assert.AreEqual(u.EMail, "cuenta@ubu.es");
+            Usuario u2 = new Usuario("cuenta2", "cuenta2@ubu.es", "pepinillo2");
+            Assert.AreEqual(u2.Cuenta, "cuenta2");
+            Assert.AreEqual(u2.EMail, "cuenta2@ubu.es");
+            Usuario u3 = new Usuario("cuenta3", "cuenta3@ubu.es", "pepinillo2");
+            Assert.AreEqual(u3.Cuenta, "cuenta3");
+            Assert.AreEqual(u3.EMail, "cuenta3@ubu.es");
         }
 
         [TestMethod]
         public void TestContrasena ()
         {
-            Usuario u = new Usuario(1, "cuenta", "cuenta@ubu.es", "pepinillo");
+            Usuario u = new Usuario("cuenta", "cuenta@ubu.es", "pepinillo");
             Assert.IsTrue(u.ComprobarContrasena("pepinillo"));
             u.AsignarContrasena("aceituna");
             Assert.IsTrue(u.ComprobarContrasena("aceituna"));
