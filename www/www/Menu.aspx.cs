@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,41 @@ namespace www
 {
     public partial class Menu : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Seleccionar.aspx");
+        }
+
+        protected void end_Click(object sender, EventArgs e)
+        {
+            Session["sesion"] = null;
+            Server.Transfer(".\\Seleccionar.aspx");
+        }
+
+        protected void Anadir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Modificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ActDes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Result_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Resultados.aspx");
         }
     }
 }

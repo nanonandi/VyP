@@ -38,7 +38,7 @@
                 </tr>    
                 <tr>
                     <td>
-                        <asp:Button ID="Button1" runat="server" CssClass="auto-style6" Height="37px" OnClick="Button1_Click" Text="Iniciar sesión" Width="170px" />
+                        <asp:Button ID="Iniciar" runat="server" CssClass="auto-style6" Height="37px" OnClick="Iniciar_Click" Text="Iniciar sesión" Width="170px" />
                     </td>
                 </tr>    
                 <tr>
@@ -48,13 +48,11 @@
                     <td class="auto-style2">Encuestas:<br />
                         <br />
                         
-                        <asp:DropDownList ID="enc" runat="server">
+                        <asp:DropDownList ID="Enc" AutoPostBack="true" runat="server" OnSelectedIndexChanged="Enc_SelectedIndexChanged">
                         </asp:DropDownList>
                         <br />
                     </td>
                     <td class="auto-style4">
-                        <asp:Button ID="Verdesc" runat="server" OnClick="Verdesc_Click" Text="Ver Descripcion" Width="111px" />
-                        <br />
                         <br />
                         <asp:Label ID="desctext" runat="server" Text="(Descripción)"></asp:Label>
                     </td>

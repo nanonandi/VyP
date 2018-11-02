@@ -18,7 +18,10 @@ namespace www
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            
+            if(Session["sesion"] != null)
+            {
+                Iniciar.Text = "menu";
+            }
 
             db = (BaseDatos)Session["db"];
             if (db == null)
@@ -27,14 +30,13 @@ namespace www
                 Session["db"] = db;
 
             }
-            
+
+            //Session["sesion"];
+            //Session["encuestaActiva"];
 
 
             if (!IsPostBack)
             {
-
-                Session["encuestaActiva"] = null;
-                Session["sesion"] = null;
 
                 itemsEncuestas.Add(new ListItem("Vacio", "0"));
                 foreach (Encuesta en in db.EncuestasActivas())
@@ -42,30 +44,11 @@ namespace www
                     itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
                 }
 
-                enc.DataSource = itemsEncuestas;
-                enc.DataBind();
+                Enc.DataSource = itemsEncuestas;
+                Enc.DataBind();
             }
         }
 
-        
-
-        ListItem a;
-        protected void Verdesc_Click(object sender, EventArgs e)
-        {
-            a = enc.SelectedItem;
-            
-            if(a.Text != "Vacio")
-            {
-                Session["encuestaActiva"] = db.GetEncuesta(a.Text);
-                encuestaActiva = (Encuesta)Session["encuestaActiva"];
-                desctext.Text = encuestaActiva.Descripcion;
-            }
-            else
-            {
-                Session["encuestaActiva"] = null;
-                desctext.Text = "(Descripcion)";
-            }
-        }
 
         protected void AccEncuesta_Click(object sender, EventArgs e)
         {
@@ -79,9 +62,27 @@ namespace www
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Iniciar_Click(object sender, EventArgs e)
         {
             Server.Transfer(".\\LogIn.aspx");
+        }
+
+        ListItem a;
+        protected void Enc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            a = Enc.SelectedItem;
+
+            if (a.Text != "Vacio")
+            {
+                Session["encuestaActiva"] = db.GetEncuesta(a.Text);
+                encuestaActiva = (Encuesta)Session["encuestaActiva"];
+                desctext.Text = encuestaActiva.Descripcion;
+            }
+            else
+            {
+                Session["encuestaActiva"] = null;
+                desctext.Text = "(Descripcion)";
+            }
         }
     }
 }

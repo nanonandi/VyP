@@ -59,14 +59,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3"></td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style4">
-                        <asp:Label ID="Label1" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
+                        <asp:Label ID="error" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
                     </td>
                     <td class="auto-style5">
                     </td>
                     <td class="auto-style5">
-                        <asp:Button ID="iniciar" runat="server" Height="37px" OnClick="iniciar_Click" Text="Button" Width="170px" />
+                        <asp:Button ID="iniciar" runat="server" Height="37px" OnClick="iniciar_Click" Text="Iniciar" Width="170px" />
                     </td>
                 </tr>
             </table>

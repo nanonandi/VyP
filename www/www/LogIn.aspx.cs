@@ -13,10 +13,10 @@ namespace www
         BaseDatos db;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["sesion"] != null)
+            
+            if (Session["sesion"] != null)
             {
                 Server.Transfer(".\\Menu.aspx");
-                
             }
 
             db = (BaseDatos)Session["db"];
@@ -26,9 +26,23 @@ namespace www
 
         protected void iniciar_Click(object sender, EventArgs e)
         {
-            if (db.EstaUsuario(user.Text){
-
+            if (db.EstaUsuario(user.Text)){
+                Usuario u = db.GetUsuario(user.Text);
+                if (u.ComprobarContrasena(pass.Text))
+                {
+                    Session["sesion"] = u;
+                    Server.Transfer(".\\Menu.aspx");
+                }
+                else
+                {
+                    error.Text = "Las contraseñas no coinciden.";
+                }
+            }
+            else
+            {
+                error.Text = "El usuario no existe o las contraseñas no coinciden.";
             }
         }
+
     }
 }
