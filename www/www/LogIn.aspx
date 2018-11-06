@@ -29,6 +29,12 @@
         .auto-style11 {
             height: 37px;
         }
+        .auto-style12 {
+            text-align: left;
+        }
+        .auto-style13 {
+            margin-left: 100px;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +44,9 @@
             <table style="width: 100%;">
                 <tr>
                     <td colspan="3"><h1>Iniciar Sesión</h1></td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style12">
+                        <asp:Button ID="Volver" runat="server" CssClass="auto-style13" OnClick="Volver_Click" Text="Volver" Width="70px" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style9">LogIn</td>

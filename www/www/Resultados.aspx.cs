@@ -10,8 +10,7 @@ namespace www
 {
     public partial class Resultados : System.Web.UI.Page
     {
-        List<ListItem> itemsEncuestas = new List<ListItem>();
-        List<ListItem> itemsResultados = new List<ListItem>();
+
         BaseDatos db;
         Encuesta encuestaActiva;
         protected void Page_Load(object sender, EventArgs e)
@@ -20,22 +19,18 @@ namespace www
             if (!IsPostBack)
             {
 
-                itemsEncuestas.Add(new ListItem("Vacio", "0"));
-                foreach (Encuesta en in db.EncuestasActivas())
-                {
-                    itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
-                }
-
-                Enc.DataSource = itemsEncuestas;
+                Enc.DataSource = (List<ListItem>)Session["itemsEncuestas"];
                 Enc.DataBind();
 
-                foreach (int re in db)
+                /*
+                foreach (Encuesta en in db.EncuestasActivas())
                 {
                     itemsResultados.Add(new ListItem(en.Nombre, en.Descripcion));
                 }
 
                 Enc.DataSource = itemsEncuestas;
                 Enc.DataBind();
+                */
             }
         }
 
@@ -52,7 +47,7 @@ namespace www
             else
             {
                 Session["encuestaActiva"] = null;
-                result.Text = "(Descripcion)";
+                result.Text = "Seleccione Encuesta";
             }
         }
     }

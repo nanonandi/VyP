@@ -66,15 +66,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActDesactEnc.aspx" />
     <Content Include="AnadirEncuesta.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="Menu.aspx" />
+    <Content Include="ModificarEncuesta.aspx" />
     <Content Include="Resultados.aspx" />
     <Content Include="Seleccionar.aspx" />
     <Content Include="Votar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActDesactEnc.aspx.cs">
+      <DependentUpon>ActDesactEnc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActDesactEnc.aspx.designer.cs">
+      <DependentUpon>ActDesactEnc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AnadirEncuesta.aspx.cs">
       <DependentUpon>AnadirEncuesta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +104,13 @@
     </Compile>
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEncuesta.aspx.cs">
+      <DependentUpon>ModificarEncuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarEncuesta.aspx.designer.cs">
+      <DependentUpon>ModificarEncuesta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resultados.aspx.cs">

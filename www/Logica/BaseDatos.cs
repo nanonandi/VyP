@@ -33,14 +33,16 @@ namespace Logica
             return tablaEncuestas;
         }
 
+        List<Encuesta> activas;
         public List<Encuesta> EncuestasActivas()
         {
-            List<Encuesta> activas = new List<Encuesta>();
-            foreach(Encuesta en in tablaEncuestas)
+            activas = new List<Encuesta>();
+            foreach (Encuesta en in tablaEncuestas)
             {
                 if (en.Activo())
                 {
                     activas.Add(en);
+                    Console.WriteLine(en.Nombre);
                 }
             }
             return activas;

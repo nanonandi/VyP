@@ -11,6 +11,7 @@ namespace www
     public partial class Seleccionar : System.Web.UI.Page
     {
         List<ListItem> itemsEncuestas = new List<ListItem>();
+        List<ListItem> itemsEncuestasSel = new List<ListItem>();
 
         BaseDatos db;
         Encuesta encuestaActiva;
@@ -28,23 +29,35 @@ namespace www
             {
                 db = new BaseDatos();
                 Session["db"] = db;
-
             }
+
 
             //Session["sesion"];
             //Session["encuestaActiva"];
 
 
             if (!IsPostBack)
+
             {
 
-                itemsEncuestas.Add(new ListItem("Vacio", "0"));
-                foreach (Encuesta en in db.EncuestasActivas())
+
+                if (Session["firsttimeuser"] == null)
                 {
-                    itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
+                    itemsEncuestasSel.Add(new ListItem("Vacio", "0"));
+                    itemsEncuestas.Add(new ListItem("Vacio", "0"));
+                    foreach (Encuesta en in db.EncuestasActivas())
+                    {
+                        itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
+                        itemsEncuestasSel.Add(new ListItem(en.Nombre, en.Descripcion));
+                    }
+
+                    Session["itemsEncuestas"] = itemsEncuestas;
+                    Session["itemsEncuestasSel"] = itemsEncuestasSel;
+                    Session["firsttimeuser"] = true;
                 }
 
-                Enc.DataSource = itemsEncuestas;
+
+                Enc.DataSource = (List<ListItem>)Session["itemsEncuestasSel"];
                 Enc.DataBind();
             }
         }

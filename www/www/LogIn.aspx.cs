@@ -44,5 +44,9 @@ namespace www
             }
         }
 
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Seleccionar.aspx");
+        }
     }
 }

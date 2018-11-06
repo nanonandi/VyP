@@ -10,7 +10,7 @@
 namespace www {
     
     
-    public partial class LogIn {
+    public partial class ActDesactEnc {
         
         /// <summary>
         /// Control form1.
@@ -22,48 +22,30 @@ namespace www {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control Volver.
+        /// Control Enc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Volver;
+        protected global::System.Web.UI.WebControls.DropDownList Enc;
         
         /// <summary>
-        /// Control user.
+        /// Control Estado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user;
+        protected global::System.Web.UI.WebControls.Label Estado;
         
         /// <summary>
-        /// Control pass.
+        /// Control Aceptar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pass;
-        
-        /// <summary>
-        /// Control error.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label error;
-        
-        /// <summary>
-        /// Control iniciar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button iniciar;
+        protected global::System.Web.UI.WebControls.Button Aceptar;
     }
 }

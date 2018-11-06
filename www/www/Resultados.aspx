@@ -25,7 +25,7 @@
                     <td class="auto-style1">Seleccione encuesta:<br />
                     </td>
                     <td class="auto-style1">La media de resultados es:<br />
-                        <asp:Label ID="result" runat="server"></asp:Label>
+                        <asp:Label ID="result" runat="server">(valor)</asp:Label>
                     </td>
                     <td class="auto-style1"></td>
                 </tr>

@@ -16,13 +16,14 @@ namespace www
         {
             db = (BaseDatos)Session["db"];
             en = (Encuesta)Session["encuestaActiva"];
+            Encuesta.Text = en.Nombre;
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             if (db.EstaEncuesta(en.Nombre))
             {
-                en.Puntuar(1);
+                Valor.Text = "1";
             }
         }
 
@@ -30,7 +31,7 @@ namespace www
         {
             if (db.EstaEncuesta(en.Nombre))
             {
-                en.Puntuar(2);
+                Valor.Text = "2";
             }
         }
 
@@ -38,7 +39,7 @@ namespace www
         {
             if (db.EstaEncuesta(en.Nombre))
             {
-                en.Puntuar(3);
+                Valor.Text = "3";
             }
         }
 
@@ -46,7 +47,7 @@ namespace www
         {
             if (db.EstaEncuesta(en.Nombre))
             {
-                en.Puntuar(4);
+                Valor.Text = "4";
             }
         }
 
@@ -54,7 +55,26 @@ namespace www
         {
             if (db.EstaEncuesta(en.Nombre))
             {
-                en.Puntuar(5);
+                Valor.Text = "5";
+            }
+        }
+
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Seleccionar.aspx");
+        }
+
+        protected void Vot_Click(object sender, EventArgs e)
+        {
+
+            if(int.TryParse(Valor.Text, out int val))
+            {
+                en.Puntuar(val);
+                Server.Transfer(".\\Seleccionar.aspx");
+            }
+            else
+            {
+                error.Text = "Seleccione su votación.";
             }
         }
     }

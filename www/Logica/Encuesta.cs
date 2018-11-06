@@ -26,7 +26,11 @@ namespace Logica
         private List<int> puntuacion = new List<int>();
         public int Puntuacion
         {
-            get { return puntuacion.Sum()/puntuacion.Count; }
+            get { if (puntuacion.Count > 0)
+                {
+                    return puntuacion.Sum() / puntuacion.Count;
+                }
+                else { return 0; }  }
         }
 
 

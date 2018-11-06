@@ -39,7 +39,7 @@ namespace www
 
         protected void ActDes_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer(".\\ActDesactEnc.aspx");
         }
 
         protected void Result_Click(object sender, EventArgs e)
