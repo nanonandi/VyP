@@ -49,7 +49,7 @@ namespace TestLogica {
         }
 
         [TestMethod]
-        public void TestIntroducirIncorrectos()
+        public void TestIntroducirRepetidos()
         {
             BaseDatos b = new BaseDatos();
             Assert.AreEqual(b.NumEncuestas(), 2);
