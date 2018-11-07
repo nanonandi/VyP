@@ -35,7 +35,7 @@ namespace www
                 }
                 else
                 {
-                    error.Text = "Las contraseñas no coinciden.";
+                    error.Text = "El usuario no existe o las contraseñas no coinciden.";
                 }
             }
             else
