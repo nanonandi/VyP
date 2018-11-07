@@ -64,7 +64,7 @@
                 <tr>
                     <td class="auto-style2" colspan="2" rowspan="2">&nbsp;</td>
                     <td class="auto-style3">
-                        <asp:Label ID="error" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
+                        <asp:Label ID="Errorlab" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
                     </td>
                     <td>
                         <asp:Button ID="AccEncuesta" runat="server" OnClick="AccEncuesta_Click" Text="Aceptar" Height="37px" Width="170px" />

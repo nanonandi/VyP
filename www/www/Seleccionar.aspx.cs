@@ -64,7 +64,7 @@ namespace www
             }
             else
             {
-                error.Text = "Seleccione una encuesta";
+                Errorlab.Text = "Seleccione una encuesta";
             }
         }
 
