@@ -86,6 +86,7 @@ namespace www
                     {
                         en.Comentar(Descripcion.InnerText);
                         en.Puntuar(val);
+                        Session["encuestaActiva"] = null;
                         Server.Transfer(".\\Seleccionar.aspx");
                     }
                 }
