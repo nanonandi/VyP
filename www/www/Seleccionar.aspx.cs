@@ -70,6 +70,7 @@ namespace www
 
         protected void Iniciar_Click(object sender, EventArgs e)
         {
+
             Server.Transfer(".\\LogIn.aspx");
         }
 

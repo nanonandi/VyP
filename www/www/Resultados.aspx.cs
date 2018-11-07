@@ -55,30 +55,35 @@ namespace www
                 Session["encuestaActiva"] = null;
                 result.Text = "Seleccione Encuesta";
             }
-
             itemsResultados = new List<ListItem>();
             itemsComentarios = new List<ListItem>();
-            if (encuestaActiva.Puntuaciones != null)
+            if (encuestaActiva != null)
             {
-                foreach (int en in encuestaActiva.Puntuaciones)
-                {
-                    itemsResultados.Add(new ListItem(en.ToString()));
-                }
-
-                ResultadosList.DataSource = itemsResultados;
-                ResultadosList.DataBind();
-
+                
                 if (encuestaActiva.Puntuaciones != null)
                 {
-                    foreach (string en in encuestaActiva.Comentarios)
+                    foreach (int en in encuestaActiva.Puntuaciones)
                     {
-                        itemsComentarios.Add(new ListItem(en));
+                        itemsResultados.Add(new ListItem(en.ToString()));
                     }
+                    
+
+
+                    if (encuestaActiva.Puntuaciones != null)
+                    {
+                        foreach (string en in encuestaActiva.Comentarios)
+                        {
+                            itemsComentarios.Add(new ListItem(en));
+                        }
+                    }
+
                 }
-                ComentariosList.DataSource = itemsComentarios;
-                ComentariosList.DataBind();
 
             }
+            ResultadosList.DataSource = itemsResultados;
+            ResultadosList.DataBind();
+            ComentariosList.DataSource = itemsComentarios;
+            ComentariosList.DataBind();
         }
 
         protected void Volver_Click(object sender, EventArgs e)
