@@ -61,6 +61,7 @@ namespace www
 
         protected void Volver_Click(object sender, EventArgs e)
         {
+            Session["encuestaActiva"] = null;
             Server.Transfer(".\\Seleccionar.aspx");
         }
 
