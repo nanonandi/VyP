@@ -1,0 +1,16 @@
+1- probar votaciones
+2- votar otra encuesta
+3- votar la primera de nuevo
+4- hacer amago de votar e intentar votar la vacia
+5- intentar entrar en el menu sin iniciar sesion´
+inicios falsos de sesion
+6- iniciar sesion
+7- volver a la web inicial y entrar en el menu
+8- ver los resultados de las encuestas y de vacio
+9- desactivar una encuesta y comprobar que no aparece en seleccionar pero si en modificar, resultados y actdesact
+10- añadir una activa y otra insactiva
+11- votar la activa varias veces
+12- ver resultados de la votacion
+13- activar la inactiva y desactivar la activa
+14- hacer una votacion de la activa
+15- modificar las dos nuevas y hacer una votacion para comprobar que se ha modificado
