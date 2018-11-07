@@ -13,7 +13,10 @@ namespace www
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["sesion"] == null)
+            {
+                Server.Transfer(".\\Seleccionar.aspx");
+            }
         }
 
         protected void Volver_Click(object sender, EventArgs e)
@@ -29,12 +32,12 @@ namespace www
 
         protected void Anadir_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer(".\\AnadirEncuesta.aspx");
         }
 
         protected void Modificar_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer(".\\ModificarEncuesta.aspx");
         }
 
         protected void ActDes_Click(object sender, EventArgs e)

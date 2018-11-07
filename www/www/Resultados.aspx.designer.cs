@@ -31,6 +31,15 @@ namespace www {
         protected global::System.Web.UI.WebControls.Label result;
         
         /// <summary>
+        /// Control Volver.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Volver;
+        
+        /// <summary>
         /// Control Enc.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,14 @@ namespace www {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox ResultadosList;
+        
+        /// <summary>
+        /// Control ComentariosList.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ComentariosList;
     }
 }

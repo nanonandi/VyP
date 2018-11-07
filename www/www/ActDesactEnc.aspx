@@ -31,7 +31,9 @@
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="Volver" runat="server" OnClick="Volver_Click" Text="Volver" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Seleccione la encuesta:

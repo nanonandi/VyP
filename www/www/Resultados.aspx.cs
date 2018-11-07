@@ -13,24 +13,30 @@ namespace www
 
         BaseDatos db;
         Encuesta encuestaActiva;
+        List<ListItem> itemsEncuestasTot = new List<ListItem>();
+        List<ListItem> itemsResultados = new List<ListItem>();
+        List<ListItem> itemsComentarios = new List<ListItem>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["sesion"] == null)
+            {
+                Server.Transfer(".\\Seleccionar.aspx");
+            }
+
             db = (BaseDatos)Session["db"];
             if (!IsPostBack)
             {
 
-                Enc.DataSource = (List<ListItem>)Session["itemsEncuestas"];
-                Enc.DataBind();
-
-                /*
-                foreach (Encuesta en in db.EncuestasActivas())
+                
+                itemsEncuestasTot.Add(new ListItem("Vacio", "0"));
+                foreach (Encuesta en in db.Encuestas())
                 {
-                    itemsResultados.Add(new ListItem(en.Nombre, en.Descripcion));
+                    itemsEncuestasTot.Add(new ListItem(en.Nombre, en.Descripcion));
                 }
 
-                Enc.DataSource = itemsEncuestas;
+                Enc.DataSource = itemsEncuestasTot;
                 Enc.DataBind();
-                */
+                
             }
         }
 
@@ -49,6 +55,40 @@ namespace www
                 Session["encuestaActiva"] = null;
                 result.Text = "Seleccione Encuesta";
             }
+
+            itemsResultados = new List<ListItem>();
+            itemsComentarios = new List<ListItem>();
+            if (encuestaActiva.Puntuaciones != null)
+            {
+                foreach (int en in encuestaActiva.Puntuaciones)
+                {
+                    itemsResultados.Add(new ListItem(en.ToString()));
+                }
+
+                ResultadosList.DataSource = itemsResultados;
+                ResultadosList.DataBind();
+
+                if (encuestaActiva.Puntuaciones != null)
+                {
+                    foreach (string en in encuestaActiva.Comentarios)
+                    {
+                        itemsComentarios.Add(new ListItem(en));
+                    }
+                }
+                ComentariosList.DataSource = itemsComentarios;
+                ComentariosList.DataBind();
+
+            }
+        }
+
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Menu.aspx");
+        }
+
+        protected void ResultadosList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

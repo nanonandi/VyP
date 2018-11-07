@@ -14,36 +14,35 @@ namespace www
         BaseDatos db;
         Encuesta encuestaActiva;
         ListItem a;
+        List<ListItem> itemsEncuestasTot = new List<ListItem>();
 
-        List<ListItem> itemsEncuestasSel = new List<ListItem>();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["sesion"] == null)
+            {
+                Server.Transfer(".\\Seleccionar.aspx");
+            }
+
             db = (BaseDatos)Session["db"];
             if (!IsPostBack)
             {
-                Enc.DataSource = (List<ListItem>)Session["itemsEncuestas"];
+                itemsEncuestasTot.Add(new ListItem("Vacio", "0"));
+                foreach (Encuesta en in db.Encuestas())
+                {
+                    itemsEncuestasTot.Add(new ListItem(en.Nombre, en.Descripcion));
+                }
+
+                Enc.DataSource = itemsEncuestasTot;
                 Enc.DataBind();
             }
         }
 
         protected void Aceptar_Click(object sender, EventArgs e)
         {
+
             a = Enc.SelectedItem;
             db.GetEncuesta(a.Text).ActivarDesactivarEncuesta();
-
-            if (!IsPostBack)
-
-            {
-                itemsEncuestasSel = new List<ListItem>();
-                itemsEncuestasSel.Add(new ListItem("Vacio", "0"));
-                foreach (Encuesta en in db.EncuestasActivas())
-                {
-                    itemsEncuestasSel.Add(new ListItem(en.Nombre, en.Descripcion));
-                }
-                Session["itemsEncuestasSel"] = null;
-                //Session["itemsEncuestasSel"] = itemsEncuestasSel;
-                Session["firsttimeuser"] = true;
-            }
 
             Server.Transfer(".\\Menu.aspx");
         }
@@ -64,7 +63,7 @@ namespace www
                 }
                 else
                 {
-                    Estado.Text = "Desactiva";
+                    Estado.Text = "Inactiva";
                     Aceptar.Text = "Activar";
                 }
             }
@@ -73,6 +72,11 @@ namespace www
                 Session["encuestaActiva"] = null;
                 Estado.Text = "Seleccione Encuesta";
             }
+        }
+
+        protected void Volver_Click(object sender, EventArgs e)
+        {
+            Server.Transfer(".\\Menu.aspx");
         }
     }
 }

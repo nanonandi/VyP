@@ -33,6 +33,37 @@ namespace Logica
                 else { return 0; }  }
         }
 
+        private List<string> comentarios = new List<string>();
+        public List<string> Comentarios
+        {
+            get
+            {
+                if (comentarios.Count > 0)
+                {
+                    return comentarios;
+                }
+                else { return null; }
+            }
+        }
+        public void Comentar(string comentario)
+        {
+            this.comentarios.Add(comentario);
+        }
+
+
+
+        public List<int> Puntuaciones
+        {
+            get
+            {
+                if (puntuacion.Count > 0)
+                {
+                    return puntuacion;
+                }
+                else { return null; }
+            }
+        }
+
 
         public Encuesta(string nombre, string descripcion, bool activado)
         {

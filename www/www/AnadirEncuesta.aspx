@@ -8,50 +8,57 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 29px;
+            height: 23px;
         }
         .auto-style2 {
-            width: 100%;
+            width: 223px;
         }
         .auto-style3 {
-            margin-left: 40px;
+            height: 23px;
+            width: 223px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style2">
+            <table style="width:100%;">
                 <tr>
-                    <h1>Añadir encuesta</h1>
+                    <td class="auto-style2">Activar o desactivar Encuesta</td>
                     <td>&nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:Button ID="Volver" runat="server" OnClick="Volver_Click" Text="Volver" />
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
-                        <asp:TextBox ID="nombre" placeholder="Nombre" runat="server" Font-Overline="False"></asp:TextBox>
-                    </td>
-                    <td class="auto-style1">
-                        <asp:Button ID="Volver" runat="server" OnClick="Button1_Click" Text="Volver" />
-                    </td>
-                    <td class="auto-style1"></td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="Nombre" placeholder="Nombre" runat="server" Font-Overline="False"></asp:TextBox>
+                        <br />
+                        <textarea id="Descripcion" placeholder="Descripcion" runat="server" cols="20" name="S1" rows="2"></textarea></td>
+                    <td>
+                        <asp:RadioButtonList ID="Radio" runat="server" AutoPostBack="True" >
+                            <asp:ListItem Value="true">Activa</asp:ListItem>
+                            <asp:ListItem Value="false">Inactiva</asp:ListItem>
+                        </asp:RadioButtonList>
+&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <textarea id="Descripcion" placeholder="Descripcion"cols="20" name="S1" rows="2"></textarea><asp:Button ID="Aceptar" runat="server" Text="Aceptar" />
+                        <asp:Label ID="Errorlab" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style1">
+                        <asp:Button ID="Aceptar" runat="server" OnClick="Aceptar_Click" Text="Aceptar cambios" />
+                    </td>
+                    <td class="auto-style1"></td>
                 </tr>
             </table>
         </div>
-    <p>
-        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-            <asp:ListItem>Activa</asp:ListItem>
-            <asp:ListItem>Inactiva</asp:ListItem>
-        </asp:RadioButtonList>
-        </p>
     </form>
-    </body>
+</body>
 </html>

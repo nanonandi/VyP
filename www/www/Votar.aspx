@@ -20,6 +20,13 @@
         .auto-style4 {
             text-align: left;
         }
+        .auto-style5 {
+            height: 67px;
+        }
+        .auto-style6 {
+            text-align: center;
+            height: 67px;
+        }
     </style>
 </head>
 <body>
@@ -28,7 +35,7 @@
             <table class="auto-style1">
                 <tr>
                     <td>&nbsp;</td>
-                    <td colspan="6"><H1>Realiza tu Votación ! :D</H1></td>
+                    <td colspan="6"><h1>Realiza tu Votación ! :D</h1></td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -61,19 +68,22 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
+                    <td class="auto-style5"></td>
+                    <td class="auto-style6" colspan="6">
+                        <textarea id="Descripcion" placeholder="Comentario" runat="server" cols="80" name="S1" rows="2"></textarea></td>
+                    <td class="auto-style5"></td>
+                </tr>
+                <tr>
                     <td>&nbsp;</td>
                     <td>Votación actual:
                         <asp:Label ID="Valor" runat="server"></asp:Label>
                     </td>
-                    <td class="auto-style2">
-                        <asp:Label ID="error" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
+                    <td class="auto-style2" colspan="4">
+                        <asp:Label ID="errorlab" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
                     </td>
-                    <td colspan="2" class="auto-style2">
+                    <td>
                         <asp:Button ID="Vot" runat="server" OnClick="Vot_Click" Text="Votar" />
                     </td>
-                    <td class="auto-style2">
-                        &nbsp;</td>
-                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 </table>

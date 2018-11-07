@@ -69,12 +69,30 @@ namespace www
 
             if(int.TryParse(Valor.Text, out int val))
             {
-                en.Puntuar(val);
-                Server.Transfer(".\\Seleccionar.aspx");
+                
+                if(val >= 3)
+                {
+                    en.Comentar(Descripcion.InnerText);
+                    en.Puntuar(val);
+                    Server.Transfer(".\\Seleccionar.aspx");
+                }
+                else
+                {
+                    if (Descripcion.InnerText == "")
+                    {
+                        errorlab.Text = "Con una nota tan mala necesitamos saber cuál es la razón para mejorar. Haga un comentario.";
+                    }
+                    else
+                    {
+                        en.Comentar(Descripcion.InnerText);
+                        en.Puntuar(val);
+                        Server.Transfer(".\\Seleccionar.aspx");
+                    }
+                }
             }
             else
             {
-                error.Text = "Seleccione su votación.";
+                errorlab.Text = "Seleccione su votación.";
             }
         }
     }

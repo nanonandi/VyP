@@ -39,25 +39,18 @@ namespace www
             if (!IsPostBack)
 
             {
+                
 
-
-                if (Session["firsttimeuser"] == null)
+                itemsEncuestas.Add(new ListItem("Vacio", "0"));
+                foreach (Encuesta en in db.EncuestasActivas())
                 {
-                    itemsEncuestasSel.Add(new ListItem("Vacio", "0"));
-                    itemsEncuestas.Add(new ListItem("Vacio", "0"));
-                    foreach (Encuesta en in db.EncuestasActivas())
-                    {
-                        itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
-                        itemsEncuestasSel.Add(new ListItem(en.Nombre, en.Descripcion));
-                    }
-
-                    Session["itemsEncuestas"] = itemsEncuestas;
-                    Session["itemsEncuestasSel"] = itemsEncuestasSel;
-                    Session["firsttimeuser"] = true;
+                    itemsEncuestas.Add(new ListItem(en.Nombre, en.Descripcion));
                 }
 
+                Session["itemsEncuestas"] = itemsEncuestas;
 
-                Enc.DataSource = (List<ListItem>)Session["itemsEncuestasSel"];
+
+                Enc.DataSource = itemsEncuestas;
                 Enc.DataBind();
             }
         }
