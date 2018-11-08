@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logica.BaseDatos">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABMABAAQAAAAgAAAAEAAAAIAIAAEAABAAAAAQBAIAAA=</HashCode>
+      <FileName>BaseDatos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logica.Encuesta">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAAAAAAAAACAkAEBgEARAABAAIAhAAAAAYAAgAA=</HashCode>
+      <FileName>Encuesta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logica.Usuario">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAkAACABAAACAAAMAgAAgAAAAAAAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

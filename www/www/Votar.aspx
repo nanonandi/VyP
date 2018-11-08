@@ -79,7 +79,7 @@
                         <asp:Label ID="Valor" runat="server"></asp:Label>
                     </td>
                     <td class="auto-style2" colspan="4">
-                        <asp:Label ID="errorlab" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
+                        <asp:Label ID="Errorlab" runat="server" BackColor="#FF3300" ForeColor="White"></asp:Label>
                     </td>
                     <td>
                         <asp:Button ID="Vot" runat="server" OnClick="Vot_Click" Text="Votar" />

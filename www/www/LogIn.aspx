@@ -69,7 +69,7 @@
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style4">
-                        <asp:Label ID="error" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
+                        <asp:Label ID="Errorlab" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
                     </td>
                     <td class="auto-style5">
                     </td>

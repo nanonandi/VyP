@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="www.ActDesactEnc">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAQIAAAAAAAAAAAIAABAEAgAAAgAAIAAUg=</HashCode>
+      <FileName>ActDesactEnc.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.AnadirEncuesta">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACCAAAQAAAAAAAAggABIAABACAAAAAgAAIAAUA=</HashCode>
+      <FileName>AnadirEncuesta.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.LogIn">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEAAEAAgAAIAAAAAAAAAAAQAIAAUA=</HashCode>
+      <FileName>LogIn.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.Menu">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAACAABAAQAKAABgAAIAAAAAAIAYUA=</HashCode>
+      <FileName>Menu.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.ModificarEncuesta">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAQIAAAAAAAgAABIAABAEAgAAAgAAIAAUA=</HashCode>
+      <FileName>ModificarEncuesta.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.Resultados">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAAQYAAABCAAAAAAIAAAAEAgBAAAAAIAAUA=</HashCode>
+      <FileName>Resultados.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.Seleccionar">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAACAAAAQAAECAAIAAAAAIAAAAEAwAAAAAAIAAEA=</HashCode>
+      <FileName>Seleccionar.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="www.Votar">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAACAAAQgAAEEAAAAAAFIAAgAAAAAAAAAAIAAUA=</HashCode>
+      <FileName>Votar.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

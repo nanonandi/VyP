@@ -33,7 +33,7 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td colspan="3" rowspan="2"><h1 class="auto-style5">Seleccione la encuesta que quiera votar.</h1></td>
+                    <td colspan="3" rowspan="2"><h1 class="auto-style5" id="Princpal">Seleccione la encuesta que quiera votar.</h1></td>
                     <td>&nbsp;</td>
                 </tr>    
                 <tr>

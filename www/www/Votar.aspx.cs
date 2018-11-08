@@ -82,7 +82,7 @@ namespace www
                 {
                     if (Descripcion.InnerText == "")
                     {
-                        errorlab.Text = "Con una nota tan mala necesitamos saber cuál es la razón para mejorar. Haga un comentario.";
+                        Errorlab.Text = "Con una nota tan mala necesitamos saber cuál es la razón para mejorar. Haga un comentario.";
                     }
                     else
                     {
@@ -95,7 +95,7 @@ namespace www
             }
             else
             {
-                errorlab.Text = "Seleccione su votación.";
+                Errorlab.Text = "Seleccione su votación.";
             }
         }
     }

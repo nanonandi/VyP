@@ -35,12 +35,12 @@ namespace www
                 }
                 else
                 {
-                    error.Text = "El usuario no existe o las contraseñas no coinciden.";
+                    Errorlab.Text = "El usuario no existe o las contraseñas no coinciden.";
                 }
             }
             else
             {
-                error.Text = "El usuario no existe o las contraseñas no coinciden.";
+                Errorlab.Text = "El usuario no existe o las contraseñas no coinciden.";
             }
         }
 
