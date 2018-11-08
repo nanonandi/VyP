@@ -64,6 +64,12 @@ namespace TestLogica {
             Assert.IsFalse(e.Equals(e3));
         }
 
-
+        [TestMethod]
+        public void TestComentar()
+        {
+            Encuesta e = new Encuesta("Encuesta1", "Primera encuesta", true);
+            e.Comentar("Comentario");
+            Assert.AreEqual(e.Comentarios[0], "Comentario");
+        }
     }
 }
