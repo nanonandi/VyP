@@ -25,8 +25,12 @@ namespace TestLogica {
         {
             BaseDatos b = new BaseDatos();
             Assert.AreEqual(b.NumEncuestas(), 12);
-            Assert.IsTrue(b.EstaEncuesta("Encuesta 1"));
-            Assert.IsTrue(b.EstaEncuesta("Encuesta 2"));
+            Assert.IsTrue(b.EstaEncuesta("e1"));
+            Assert.IsTrue(b.EstaEncuesta("e2"));
+            Encuesta encue = b.GetEncuesta("e1");
+            DateTime daw = new DateTime(2016, 10, 6, 15, 0, 0);
+            Assert.IsTrue(encue.Fechas.Contains(daw));
+            Assert.IsTrue(encue.Puntuaciones.Contains(4));
 
         }
 
@@ -44,7 +48,7 @@ namespace TestLogica {
         {
             BaseDatos b = new BaseDatos();
             b.GuardarEncuesta(new Encuesta("encuestaprueba", "esta es una encuesta de prueba", true));
-            Assert.AreEqual(b.NumEncuestas(), 3);
+            Assert.AreEqual(b.NumEncuestas(), 13);
             Assert.IsTrue(b.EstaEncuesta("encuestaprueba"));
         }
 
@@ -53,23 +57,23 @@ namespace TestLogica {
         {
             BaseDatos b = new BaseDatos();
             b.GuardarEncuesta(new Encuesta("encuestainactiva", "esta es una encuesta no activa", false));
-            Assert.AreEqual(b.NumEncuestas(), 3);
+            Assert.AreEqual(b.NumEncuestas(), 13);
             Assert.IsTrue(b.EstaEncuesta("encuestainactiva"));
-            Assert.AreEqual(b.NumEncuestasActivas(), 2);
+            Assert.AreEqual(b.NumEncuestasActivas(), 7);
         }
 
         [TestMethod]
         public void TestIntroducirRepetidos()
         {
             BaseDatos b = new BaseDatos();
-            Assert.AreEqual(b.NumEncuestas(), 2);
+            Assert.AreEqual(b.NumEncuestas(), 12);
             Assert.AreEqual(b.NumUsuarios(), 2);
             Assert.IsTrue(b.EstaUsuario("cero"));
             Assert.IsTrue(b.EstaEncuesta("Encuesta 1"));
             b.GuardarUsuario(new Usuario("cero", "cero@cero.com", "hola"));
             Assert.AreEqual(b.NumUsuarios(), 2);
             b.GuardarEncuesta(new Encuesta("Encuesta 1", "Esta encuesta es la primera", true));
-            Assert.AreEqual(b.NumEncuestas(), 2);
+            Assert.AreEqual(b.NumEncuestas(), 12);
         } 
     }
 }

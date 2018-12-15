@@ -29,7 +29,7 @@ namespace Logica
 
             Encuesta encu;
 
-            using (var reader = new StreamReader("\\datos.csv"))
+            using (var reader = new StreamReader(@"..\..\..\datos.csv"))
             {
                 int linea = 0;
                 DateTime fech;
@@ -45,12 +45,15 @@ namespace Logica
                         encu.Puntuar(int.Parse(values[1]));
                         encu.Comentar(values[2]);
 
-                        fech = new DateTime(int.Parse(values[3]), int.Parse(values[4]), int.Parse(values[5]), int.Parse(values[6]), 0, 0);
+                        
+                        fech = new DateTime(int.Parse(values[3]), int.Parse(values[5]), int.Parse(values[4]), int.Parse(values[6]), 0, 0);
                         encu.Fechar(fech);
+
 
                     }
                     else
                     {
+                        
                         Encuesta e = new Encuesta(values[0], values[1], bool.Parse(values[2]));
                         tablaEncuestas.Add(e);
                     }
