@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Logica
 {
@@ -25,6 +26,38 @@ namespace Logica
             Encuesta e2 = new Encuesta("Encuesta 2", "Esta encuesta es el segundo", true);
             tablaEncuestas.Add(e1);
             tablaEncuestas.Add(e2);
+
+            Encuesta encu;
+
+            using (var reader = new StreamReader("\\datos.csv"))
+            {
+                int linea = 0;
+                DateTime fech;
+                while (!reader.EndOfStream)
+                {
+                    linea++;
+                    var line = reader.ReadLine();
+                    var values = line.Split(';');
+
+                    if (linea > 10)
+                    {
+                        encu = GetEncuesta(values[0]);
+                        encu.Puntuar(int.Parse(values[1]));
+                        encu.Comentar(values[2]);
+
+                        fech = new DateTime(int.Parse(values[3]), int.Parse(values[4]), int.Parse(values[5]), int.Parse(values[6]), 0, 0);
+                        encu.Fechar(fech);
+
+                    }
+                    else
+                    {
+                        Encuesta e = new Encuesta(values[0], values[1], bool.Parse(values[2]));
+                        tablaEncuestas.Add(e);
+                    }
+                    
+
+                }
+            }
 
         }
 

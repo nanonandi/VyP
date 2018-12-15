@@ -15,9 +15,19 @@ namespace TestLogica {
             Assert.AreEqual(b.NumUsuarios(),2);
             Assert.IsTrue(b.EstaUsuario("cero"));
             Assert.IsTrue(b.EstaUsuario("uno"));
-            Assert.AreEqual(b.NumEncuestas(), 2);
+            Assert.AreEqual(b.NumEncuestas(), 12);
             Assert.IsTrue(b.EstaEncuesta("Encuesta 1"));
             Assert.IsTrue(b.EstaEncuesta("Encuesta 2"));
+        }
+
+        [TestMethod]
+        public void TestLeerFichero()
+        {
+            BaseDatos b = new BaseDatos();
+            Assert.AreEqual(b.NumEncuestas(), 12);
+            Assert.IsTrue(b.EstaEncuesta("Encuesta 1"));
+            Assert.IsTrue(b.EstaEncuesta("Encuesta 2"));
+
         }
 
         [TestMethod]

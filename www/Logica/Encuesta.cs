@@ -45,6 +45,26 @@ namespace Logica
                 else { return null; }
             }
         }
+
+        private List<DateTime> fechas = new List<DateTime>();
+        public List<DateTime> Fechas
+        {
+            get
+            {
+                if (fechas.Count > 0)
+                {
+                    return fechas;
+                }
+                else { return null; }
+            }
+
+        }
+
+        public void Fechar(DateTime fech)
+        {
+            this.fechas.Add(fech);
+        }
+
         public void Comentar(string comentario)
         {
             this.comentarios.Add(comentario);
