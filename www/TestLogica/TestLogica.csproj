@@ -53,6 +53,7 @@
     <Compile Include="TestBaseDatos.cs" />
     <Compile Include="TestEncuesta.cs" />
     <Compile Include="TestUsuario.cs" />
+    <Compile Include="TestEstadistica.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
